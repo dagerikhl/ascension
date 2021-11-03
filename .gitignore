@@ -1,4 +1,13 @@
+# Project
 /node_modules/
 /public/build/
 
+# OSs
 .DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# Logs
+*.log
