@@ -14,12 +14,16 @@
 
 <style lang="scss">
   .AppFooter {
-    height: 128px;
     grid-column: span 2;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    height: 128px;
     padding: 0 2rem;
+
+    box-shadow: inset 0 0 0.25rem gray;
 
     .group {
       display: flex;

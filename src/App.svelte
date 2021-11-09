@@ -1,19 +1,22 @@
 <script lang="ts">
+  import { Router } from 'svelte-routing';
   import AppContent from './app/AppContent.svelte';
   import AppFooter from './app/AppFooter.svelte';
   import AppHeader from './app/AppHeader.svelte';
   import AppMenu from './app/AppMenu.svelte';
 </script>
 
-<main class="App">
-  <AppHeader />
+<Router>
+  <div class="App">
+    <AppHeader />
 
-  <AppMenu />
+    <AppMenu />
 
-  <AppContent />
+    <AppContent />
 
-  <AppFooter />
-</main>
+    <AppFooter />
+  </div>
+</Router>
 
 <style lang="scss">
   .App {
