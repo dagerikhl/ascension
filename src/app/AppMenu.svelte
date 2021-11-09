@@ -3,8 +3,8 @@
 </script>
 
 <nav class="AppMenu">
-  <NavLink to="/">Home</NavLink>
-  <NavLink to="/not-home">Well this is not home at all...</NavLink>
+  <NavLink to="/my-ascension">My Ascension</NavLink>
+  <NavLink to="/about">About</NavLink>
 </nav>
 
 <style lang="scss">
