@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Auth0Client } from '@auth0/auth0-spa-js';
   import { onMount } from 'svelte';
+  import Button from '../common/components/basics/Button.svelte';
   import authService from '../modules/authentication/services/authService';
   import { isAuthenticated } from '../modules/authentication/stores/users';
 
@@ -25,12 +26,12 @@
   </div>
 
   <div class="group">
-    <div>Logged in? {$isAuthenticated}</div>
-  </div>
-
-  <div class="group">
-    <button on:click={login}>Login</button>
-    <button on:click={logout}>Logout</button>
+    {#if $isAuthenticated}
+      <div title="You are logged in">👤</div>
+      <Button on:click={logout}>Logout</Button>
+    {:else}
+      <Button on:click={login}>Login</Button>
+    {/if}
   </div>
 </header>
 
