@@ -2,6 +2,8 @@ import createAuth0Client, { Auth0Client, Auth0ClientOptions } from '@auth0/auth0
 import { user, isAuthenticated, popupOpen } from '../stores/users';
 import config from '../../../../auth_config.js';
 
+// TODO Fix that session isn't remembered on refresh (or at all)
+
 const createClient = async (): Promise<Auth0Client> =>
   createAuth0Client({
     domain: config.domain,

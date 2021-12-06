@@ -8,7 +8,7 @@
     "prepare": "husky install",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
+    "start": "sirv public --single --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "prettify": "prettier --write --ignore-unknown"
   },

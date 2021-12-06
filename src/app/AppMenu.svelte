@@ -1,10 +1,15 @@
 <script lang="ts">
   import NavLink from '../common/components/layout/NavLink.svelte';
+  import { isAuthenticated } from '../modules/authentication/stores/users';
+  import { ROUTES } from '../modules/routing/routes';
 </script>
 
 <nav class="AppMenu">
-  <NavLink to="/my-ascension">My Ascension</NavLink>
-  <NavLink to="/about">About</NavLink>
+  {#each ROUTES as route (route.path)}
+    {#if $isAuthenticated || !route.isProtected}
+      <NavLink to={route.path}>{route.label}</NavLink>
+    {/if}
+  {/each}
 </nav>
 
 <style lang="scss">

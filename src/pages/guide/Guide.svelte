@@ -1,9 +1,9 @@
 <script lang="ts">
 </script>
 
-<section class="Home">TODO Home page</section>
+<section class="Guide">TODO Guide page</section>
 
 <style lang="scss">
-  .Home {
+  .Guide {
   }
 </style>
